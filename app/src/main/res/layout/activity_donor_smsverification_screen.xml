@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInterface.DonorSMSVerificationScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_donorSMSCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/input_donorSMSCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Verification Code"
+            android:inputType="number"
+            android:gravity="center_horizontal"/>
+    </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_donor_sms_addDonor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Donor"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInterface.AddDonorInfoScreen">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_donorPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/input_donorPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Donor Phone Number"
+            android:inputType="number"
+            android:gravity="center_horizontal"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_donorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/input_donorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Donor Name"
+            android:inputType="textPersonName"
+            android:gravity="center_horizontal"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/bt_addDonor_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
+</RelativeLayout>

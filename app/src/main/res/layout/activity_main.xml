@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Collector Name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_collectionAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Collection : 50,000"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="3dp"
+        android:layout_marginTop="40dp">
+
+       <TableLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="20dp">
+           <TableRow
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="30dp">
+               <Button
+                   android:id="@+id/bt_addDonor"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Add Donor"
+                   android:layout_marginRight="5dp"
+                   android:textSize="16dp"
+                   android:padding="20dp"/>
+               <Button
+                   android:id="@+id/bt_searchDonor"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Search Donor"
+                   android:layout_marginLeft="5dp"
+                   android:textSize="16dp"
+                   android:padding="20dp"/>
+           </TableRow>
+           <TableRow
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <Button
+                   android:id="@+id/bt_transfer"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Transfer"
+                   android:layout_below="@+id/bt_addDonor"
+                   android:layout_marginRight="5dp"
+                   android:textSize="16dp"
+                   android:padding="20dp"/>
+               <Button
+                   android:id="@+id/bt_notification"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Notification"
+                   android:layout_below="@+id/bt_searchDonor"
+                   android:layout_marginLeft="5dp"
+                   android:textSize="16dp"
+                   android:padding="20dp"/>
+           </TableRow>
+
+       </TableLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
