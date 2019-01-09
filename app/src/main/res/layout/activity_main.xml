@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/lyt_main_activity">
 
     <TextView
         android:layout_width="match_parent"
@@ -29,10 +30,10 @@
         android:background="@color/colorPrimary">
 
         <TextView
-            android:id="@+id/tv_collectionAmount"
+            android:id="@+id/tv_MainScreenCollectionAmount"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Collection : 50,000"
+            android:text="Collection : "
             android:gravity="center_horizontal"
             android:padding="20dp"
             android:background="@color/colorPrimary"

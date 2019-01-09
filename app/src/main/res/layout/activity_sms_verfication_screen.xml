@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/lyt_sms_veri_screen"
     tools:context=".SmsVerficationScreen">
 
     <TextView
@@ -40,4 +41,14 @@
         android:layout_marginRight="20dp"
         android:textSize="16dp"/>
 
+    <TextView
+        android:id="@+id/tvResendCode"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend Code ?"
+        android:textSize="16dp"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp"/>
 </LinearLayout>

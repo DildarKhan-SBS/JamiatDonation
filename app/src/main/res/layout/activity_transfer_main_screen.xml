@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/lyt_transfer_main_screen"
     tools:context=".UserInterface.TransferMainScreen">
     <LinearLayout
         android:layout_width="match_parent"

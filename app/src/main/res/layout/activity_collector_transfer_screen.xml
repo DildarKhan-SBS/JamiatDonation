@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/lyt_collector_transfer_screen"
     tools:context=".UserInterface.CollectorTransferScreen">
 
-    
+
+
     <TextView
+        android:id="@+id/tv_collectorTransfer_collection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Collection 50,000"
+        android:text="My Collection "
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:textSize="20dp"/>
@@ -19,13 +22,17 @@
         android:id="@+id/input_layout_searchCollector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp">
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
         <EditText
             android:id="@+id/input_searchCollector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Search Collector"
+            android:inputType="number"
             android:gravity="center_horizontal"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -40,11 +47,41 @@
         android:layout_marginRight="20dp"
         android:textSize="16dp"/>
 
-    <ImageButton
-        android:id="@+id/ib_search"
-        android:layout_width="wrap_content"
+    <!--<LinearLayout
+        android:id="@+id/lyt_collecotrSearch_searchedCollector"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_search"
-        android:layout_gravity="right"
-        android:layout_margin="20dp"/>
+        android:orientation="horizontal"
+        android:layout_margin="25dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_collectorSearch_phoneNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="9949887788"
+            android:layout_gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_collectorSearch_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Raziuddin"
+            android:layout_gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:id="@+id/ib_collectorSearch_transferScreen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_media_play"/>
+
+
+    </LinearLayout>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_collectorList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

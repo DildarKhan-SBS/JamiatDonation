@@ -2,82 +2,109 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyt_DonorScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserInterface.DonorScreen">
 
     <LinearLayout
+        android:id="@+id/lyt_Linear_donor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_above="@+id/tv_donor_totalAmount">
 
         <Button
             android:id="@+id/bt_addFamilyMember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Add Family Member" />
+            android:text="Add Family Member"
+            android:layout_marginRight="10dp"/>
 
         <TextView
+            android:id="@+id/tv_donorPhoneNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Donor Mobile Number" />
-
-        <TableLayout
+            android:text="Donor Mobile Number"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableRow
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            android:layout_margin="10dp">
+            <TextView
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:weightSum="5">
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tv_donorName"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/et_donorAmount"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:inputType="number"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="4"
-                    android:text="Donor Name" />
 
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </TableRow>
-        </TableLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_donorList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Total"
-    android:layout_above="@+id/tl_bottomLayout"
-    android:layout_marginRight="30dp"
-    android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/tv_donor_totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tl_bottomLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Total"/>
+
     <TableLayout
         android:id="@+id/tl_bottomLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp">
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="5">
+            android:weightSum="9">
+
             <Button
+                android:id="@+id/bt_receiveDonation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:text="Receive Donation"/>
+                android:layout_weight="6"
+                android:text="Receive Donation"
+                android:layout_marginRight="10dp"/>
+
             <EditText
                 android:id="@+id/et_totalReceiveDonation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="3"
+                android:cursorVisible="false"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:focusableInTouchMode="false"/>
         </TableRow>
     </TableLayout>
 </RelativeLayout>

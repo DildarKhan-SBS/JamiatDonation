@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/lyt_transfer_screen"
     tools:context=".UserInterface.TransferScreen">
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,22 +13,28 @@
         android:layout_margin="20dp">
 
         <TextView
+            android:id="@+id/tv_transfer_senderCollectorName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sender Collector Name"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:textStyle="bold"/>
         <TextView
+            android:id="@+id/tv_transfer_receiverName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Receiver Collector/Markz Name"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:textStyle="bold"/>
         <TextView
+            android:id="@+id/tv_transfer_amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Amount 50,000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <LinearLayout
